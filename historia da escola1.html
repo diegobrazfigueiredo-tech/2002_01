@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>História da Escola José de Alencar</title>
+
+    <style>
+
+        /* ==============================
+           CONFIGURAÇÕES GERAIS
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #E8F6F8;
+            color: #0057B8;
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           CABEÇALHO
+        ============================== */
+
+        header {
+            background-color: #0057B8;
+            color: #E8F6F8;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+
+        /* ==============================
+           MENU
+        ============================== */
+
+        nav {
+            background-color: #E8F6F8;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        /* BOTÕES DE NAVEGAÇÃO */
+        nav a {
+            display: inline-block;
+
+            color: #E8F6F8;
+            background-color: #0057B8;
+
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+
+            margin: 6px 8px;
+            padding: 12px 22px;
+
+            border: 2px solid #0057B8;
+            border-radius: 25px;
+
+            /* efeito de profundidade */
+            box-shadow: 0 4px 0 #0057B8;
+
+            transition: all 0.25s ease;
+        }
+
+        /* PASSAR O MOUSE */
+        nav a:hover {
+            background-color: #E8F6F8;
+            color: #0057B8;
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 7px 0 #0057B8;
+        }
+
+        /* CLICAR NO BOTÃO */
+        nav a:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #0057B8;
+        }
+
+
+        /* ==============================
+           ÁREA PRINCIPAL
+        ============================== */
+
+        main {
+            width: 90%;
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #E8F6F8;
+        }
+
+
+        /* ==============================
+           SEÇÕES
+        ============================== */
+
+        section {
+            margin-bottom: 30px;
+            padding: 28px;
+            background-color: #E8F6F8;
+            border: 2px solid #0057B8;
+            border-left: 8px solid #0057B8;
+            border-radius: 10px;
+        }
+
+        section h2 {
+            color: #0057B8;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+
+        /* ==============================
+           PARÁGRAFOS
+        ============================== */
+
+        p {
+            color: #0057B8;
+            font-size: 17px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        .centralizado {
+            text-align: center;
+        }
+
+
+        /* ==============================
+           FUNDAÇÃO
+        ============================== */
+
+        .fundacao {
+            background-color: #0057B8;
+            border: 2px solid #E8F6F8;
+        }
+
+        .fundacao h2 {
+            color: #E8F6F8;
+        }
+
+        .fundacao p {
+            color: #E8F6F8;
+        }
+
+        .ano {
+            color: #E8F6F8;
+            font-size: 42px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+
+        /* ==============================
+           FONTES
+        ============================== */
+
+        .fontes {
+            background-color: #0057B8;
+            border: 2px solid #E8F6F8;
+        }
+
+        .fontes h2 {
+            color: #E8F6F8;
+        }
+
+        .fontes p {
+            color: #E8F6F8;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+
+        /* ==============================
+           RODAPÉ
+        ============================== */
+
+        footer {
+            background-color: #0057B8;
+            color: #E8F6F8;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: #E8F6F8;
+            text-align: center;
+            font-size: 15px;
+            margin: 5px;
+        }
+
+
+        /* ==============================
+           CELULAR
+        ============================== */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            /* BOTÕES NO CELULAR */
+            nav a {
+                display: block;
+                width: 280px;
+                max-width: 90%;
+                margin: 9px auto;
+                text-align: center;
+            }
+
+            main {
+                width: 94%;
+                padding: 15px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .ano {
+                font-size: 36px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>
+            História da Escola José de Alencar
+        </h1>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+<a href="index2.html">
+            Inicio
+        </a>
+
+
+        <a href="cursostecnicos1.html">
+            Cursos Técnicos
+        </a>
+
+        <a href="contato1.html">
+            Contato
+        </a>
+
+        <a href="galeriadeImagens1.html">
+            Imagem da Escola
+        </a>
+
+        
+    </nav>
+
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+
+        <!-- FUNDAÇÃO -->
+
+        <section class="fundacao">
+
+            <h2>
+                🏫 Fundação da Escola José de Alencar
+            </h2>
+
+            <div class="ano">
+                1960
+            </div>
+
+            <p class="centralizado">
+                A escola foi fundada em
+                <strong>27 de outubro de 1960.</strong>
+            </p>
+
+            <p class="centralizado">
+                Primeiro nome da escola:
+                <strong>Grupo Escolar José de Alencar.</strong>
+            </p>
+
+        </section>
+
+
+        <!-- FATOS HISTÓRICOS -->
+
+        <section>
+
+            <h2>
+                📜 Principais fatos históricos
+            </h2>
+
+            <p>
+                Um dos principais fatos históricos ocorreu em 1960,
+                quando as antigas Escolas Reunidas José de Alencar
+                foram oficialmente transformadas em Grupo Escolar
+                José de Alencar, por meio do Decreto nº 5.958.
+            </p>
+
+            <p>
+                Outro momento importante aconteceu em 1990,
+                quando foi criado o Ensino de 2º Grau, com
+                habilitação profissional para o Magistério de
+                1º Grau, ampliando as oportunidades de formação
+                dos estudantes de Machacalis.
+            </p>
+
+        </section>
+
+
+        <!-- TRAJETÓRIA -->
+
+        <section>
+
+            <h2>
+                🎓 Trajetória da Escola
+            </h2>
+
+            <p>
+                Ao longo de sua trajetória, a escola passou por
+                mudanças para acompanhar as necessidades da educação.
+            </p>
+
+            <p>
+                Entre seus recursos atuais estão biblioteca,
+                laboratório de ciências, laboratório de informática,
+                internet, quadra esportiva coberta, sala de recursos
+                para atendimento educacional especializado e
+                materiais para atividades artísticas e esportivas.
+            </p>
+
+        </section>
+
+
+        <!-- IMPORTÂNCIA -->
+
+        <section>
+
+            <h2>
+                ⭐ A importância da escola na cidade
+            </h2>
+
+            <p>
+                Assim, a Escola José de Alencar tem importância
+                histórica para Machacalis por contribuir há décadas
+                para a educação e formação de várias gerações,
+                modernizando seus espaços e recursos e ampliando
+                as oportunidades oferecidas aos alunos.
+            </p>
+
+        </section>
+
+
+        <!-- FONTES -->
+
+        <section class="fontes">
+
+            <h2>
+                🔎 Fontes de pesquisa
+            </h2>
+
+            <p>
+                <strong>Professor Edivaldo Grapiuna</strong>
+            </p>
+
+            <p>
+                Fonte Oficial — Governo de Minas Gerais
+            </p>
+
+            <p>
+                Decreto histórico de 1960 —
+                Assembleia Legislativa de MG
+            </p>
+
+            <p>
+                Decreto de 1990 —
+                Assembleia Legislativa de MG
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            Desenvolvido pelos alunos do 2º ano:
+            Kaio, Gustavo, Cauã e Viktor.
+        </p>
+
+        <p>
+            Com instruções do professor Diegor.
+        </p>
+
+        <p>
+            © 2026 — Portal Técnico José de Alencar
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

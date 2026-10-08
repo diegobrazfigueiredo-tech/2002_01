@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Galeria - Portal Técnico José de Alencar</title>
+
+  <style>
+
+    /* ==============================
+       CONFIGURAÇÕES GERAIS
+    ============================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #E8F6F8;
+      color: #0057B8;
+    }
+
+
+    /* ==============================
+       CABEÇALHO
+    ============================== */
+
+    header {
+      background-color: #0057B8;
+      color: #E8F6F8;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+
+    /* ==============================
+       BOTÕES DE NAVEGAÇÃO
+    ============================== */
+
+    nav {
+      background-color: #E8F6F8;
+      padding: 20px 15px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    nav a {
+      display: inline-block;
+
+      color: #E8F6F8;
+      background-color: #0057B8;
+
+      text-decoration: none;
+      font-weight: bold;
+
+      padding: 12px 22px;
+
+      border: 2px solid #0057B8;
+      border-radius: 25px;
+
+      box-shadow: 0 4px 0 #0057B8;
+
+      transition: 0.25s;
+    }
+
+    nav a:hover {
+      background-color: #E8F6F8;
+      color: #0057B8;
+
+      transform: translateY(-4px);
+
+      box-shadow: 0 7px 0 #0057B8;
+    }
+
+    nav a:active {
+      transform: translateY(2px);
+
+      box-shadow: 0 2px 0 #0057B8;
+    }
+
+
+    /* ==============================
+       ÁREA PRINCIPAL
+    ============================== */
+
+    main {
+      width: 90%;
+      max-width: 1100px;
+
+      margin: 35px auto;
+
+      padding: 25px;
+
+      background-color: #E8F6F8;
+    }
+
+
+    /* ==============================
+       SEÇÕES DA GALERIA
+    ============================== */
+
+    section {
+      margin-bottom: 35px;
+
+      padding: 25px;
+
+      background-color: #E8F6F8;
+
+      border: 3px solid #0057B8;
+      border-radius: 18px;
+    }
+
+    section h2 {
+      color: #0057B8;
+
+      text-align: center;
+
+      font-size: 26px;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* ==============================
+       ORGANIZAÇÃO DAS FOTOS
+    ============================== */
+
+    .container-imagens {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+
+      width: 100%;
+
+      margin: 0 auto;
+    }
+
+
+    /* ==============================
+       FOTOS DA GALERIA
+    ============================== */
+
+    .container-imagens img {
+
+      width: 100%;
+
+      height: 320px;
+
+      object-fit: cover;
+
+      display: block;
+
+      border: 4px solid #0057B8;
+
+      border-radius: 15px;
+
+      background-color: #E8F6F8;
+
+      transition: 0.3s;
+    }
+
+
+    /* EFEITO AO PASSAR O MOUSE */
+
+    .container-imagens img:hover {
+
+      transform: scale(1.03);
+    }
+
+
+    /* ==============================
+       FOTOS ÚNICAS
+    ============================== */
+
+    .imagem-total,
+    .Leituraaoarliver,
+    .Cozinha,
+    .proferssores {
+
+      width: 75%;
+
+      max-width: 700px;
+
+      height: 380px;
+
+      object-fit: cover;
+
+      display: block;
+
+      margin: 0 auto;
+
+      border: 4px solid #0057B8;
+
+      border-radius: 18px;
+
+      background-color: #E8F6F8;
+
+      transition: 0.3s;
+    }
+
+
+    /* EFEITO NAS FOTOS ÚNICAS */
+
+    .imagem-total:hover,
+    .Leituraaoarliver:hover,
+    .Cozinha:hover,
+    .proferssores:hover {
+
+      transform: scale(1.03);
+    }
+
+
+    /* ==============================
+       RODAPÉ
+    ============================== */
+
+    footer {
+
+      background-color: #0057B8;
+
+      color: #E8F6F8;
+
+      text-align: center;
+
+      padding: 25px 20px;
+
+      margin-top: 40px;
+    }
+
+    footer p {
+
+      color: #E8F6F8;
+
+      text-align: center;
+
+      font-size: 15px;
+
+      margin: 5px;
+    }
+
+
+    /* ==============================
+       CELULAR
+    ============================== */
+
+    @media (max-width: 700px) {
+
+      header h1 {
+        font-size: 28px;
+      }
+
+
+      /* BOTÕES */
+
+      nav a {
+
+        display: block;
+
+        width: 280px;
+
+        max-width: 90%;
+
+        margin: 5px auto;
+
+        text-align: center;
+      }
+
+
+      main {
+
+        width: 94%;
+
+        padding: 12px;
+      }
+
+
+      section {
+
+        padding: 18px;
+
+        margin-bottom: 25px;
+      }
+
+
+      section h2 {
+
+        font-size: 22px;
+
+        margin-bottom: 18px;
+      }
+
+
+      /* UMA FOTO POR LINHA NO CELULAR */
+
+      .container-imagens {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+
+      .container-imagens img {
+
+        height: 250px;
+      }
+
+
+      /* FOTOS ÚNICAS */
+
+      .imagem-total,
+      .Leituraaoarliver,
+      .Cozinha,
+      .proferssores {
+
+        width: 100%;
+
+        height: 260px;
+      }
+
+    }
+
+/* ==============================
+   FRASES DAS FOTOS
+============================== */
+
+.texto-centralizado {
+    text-align: center;
+    color: #0057B8;
+    background-color: #E8F6F8;
+
+    border: 2px solid #0057B8;
+    border-radius: 15px;
+
+    padding: 15px 20px;
+    margin: 18px auto 0;
+
+    max-width: 900px;
+
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+
+    box-shadow: 0 4px 0 #0057B8;
+
+    transition: 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.texto-centralizado:hover {
+    transform: translateY(-3px);
+    background-color: #0057B8;
+    color: #E8F6F8;
+    box-shadow: 0 7px 0 #0057B8;
+}
+
+/* ==============================
+   ZOOM NAS FOTOS
+============================== */
+
+.container-imagens img,
+.imagem-total,
+.Leituraaoarliver,
+.Cozinha,
+.proferssores {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.container-imagens img:hover,
+.imagem-total:hover,
+.Leituraaoarliver:hover,
+.Cozinha:hover,
+.proferssores:hover {
+    transform: scale(1.03);
+}
+
+/* Fundo do zoom */
+
+.zoom-fundo {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #0057B8;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    cursor: zoom-out;
+}
+
+/* Foto ampliada */
+
+.zoom-fundo img {
+    max-width: 95%;
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border: 5px solid #E8F6F8;
+    border-radius: 18px;
+
+    background-color: #E8F6F8;
+
+    box-shadow: 0 0 25px #E8F6F8;
+}
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==============================
+       CABEÇALHO
+  ============================== -->
+
+  <header>
+
+    <h1>
+      Portal Técnico José de Alencar
+    </h1>
+
+  </header>
+
+
+  <!-- ==============================
+       MENU
+  ============================== -->
+
+  <nav>
+
+    <a href="index2.html">
+      Inicio
+    </a>
+
+    <a href="cursostecnicos1.html">
+      Cursos Técnicos
+    </a>
+
+    <a href="contato1.html">
+      Contato
+    </a>
+
+    <a href="historia da escola1.html">
+      Historia da Escola
+    </a>
+
+  </nav>
+
+
+  <!-- ==============================
+       GALERIA
+  ============================== -->
+
+  <main>
+
+
+    <!-- SECRETARIA -->
+
+    <section>
+
+      <h2>
+        Secretaria
+      </h2>
+
+      <div class="container-imagens">
+
+        <img src="img/Secretaria1.jpg"
+             alt="Secretaria">
+
+        <img src="img/Secretaria.jpg"
+             alt="Secretaria">
+      
+      </div>
+<p class="texto-centralizado">A secretaria é o setor da escola responsável por cuidar da parte administrativa e dos documentos dos alunos.</p>
+
+    </section>
+
+
+    <!-- SALAS DE AULA -->
+
+    <section>
+
+      <h2>
+        Salas de aula
+      </h2>
+
+      <div class="container-imagens">
+
+        <img src="img/Salas de aula.jpg"
+             alt="Salas de aula">
+
+        <img src="img/Salas de aula2.jpg"
+             alt="Salas de aula">
+
+      </div>
+<p class="texto-centralizado">os espaços da escola onde os alunos e professores se reúnem para estudar, aprender e realizar atividades.</p>
+
+    </section>
+
+
+    <!-- CANTINA -->
+
+    <section>
+
+      <h2>
+        Cantina
+      </h2>
+
+      <div class="container-imagens">
+
+        <img src="img/Cantina.jpg"
+             alt="Cantina">
+
+        <img src="img/Cantina1.jpg"
+             alt="Cantina">
+
+      </div>
+<p class="texto-centralizado">o espaço da escola onde os alunos podem comprar ou receber alimentos e bebidas durante os intervalos.</p>
+
+    </section>
+
+
+    <!-- QUADRA -->
+
+    <section>
+
+      <h2>
+        Quadra de esporte
+      </h2>
+
+      <img src="img/Quadra de esporte.jpg"
+           alt="Quadra de esporte"
+           class="imagem-total">
+<p class="texto-centralizado">o espaço da escola onde os alunos praticam atividades físicas e esportes, como futebol, vôlei, basquete e outras brincadeiras. 🏀⚽🏐</p>
+
+    </section>
+
+
+    <!-- BIBLIOTECA -->
+
+    <section>
+
+      <h2>
+        Biblioteca
+      </h2>
+
+      <div class="container-imagens">
+
+        <img src="img/Biblioteca.jpg"
+             alt="Biblioteca">
+
+        <img src="img/Biblioteca12.jpg"
+             alt="Biblioteca">
+
+      </div>
+<p class="texto-centralizado">o espaço da escola onde os alunos podem ler, estudar e pesquisar, usando livros, revistas e outros materiais. 📚📖</p>
+
+    </section>
+
+
+    <!-- LEITURA -->
+
+    <section>
+
+      <h2>
+        Leitura ao ar livre
+      </h2>
+
+      <img src="img/Leitura ao ar liver.jpg"
+           alt="Leitura ao ar livre"
+           class="Leituraaoarliver">
+<p class="texto-centralizado">é uma atividade em que os alunos leem livros e textos no espaço da frente da escola.</p>
+
+    </section>
+
+
+    <!-- COZINHA -->
+
+    <section>
+
+      <h2>
+        Cozinha
+      </h2>
+
+      <img src="img/Cozinha.jpg"
+           alt="Cozinha"
+           class="Cozinha">
+<p class="texto-centralizado">o espaço onde são preparadas e organizadas as refeições e os lanches que serão servidos aos alunos e funcionários. 🍲🥪</p>
+
+    </section>
+
+
+    <!-- PROFESSORES -->
+
+    <section>
+
+      <h2>
+        Sala dos professores
+      </h2>
+
+      <img src="img/proferssores.jpg"
+           alt="Sala dos professores"
+           class="proferssores">
+<p class="texto-centralizado">o espaço da escola onde os professores podem descansar, preparar aulas, organizar materiais e conversar sobre assuntos escolares. 👩‍🏫📚</p>
+
+    </section>
+
+
+    <!-- SUPERVISÃO -->
+
+    <section>
+
+      <h2>
+        Sala de supervisão
+      </h2>
+
+      <div class="container-imagens">
+
+        <img src="img/Sala de supervisão.jpg"
+             alt="Sala de supervisão">
+
+        <img src="img/Sala de supervisão1.jpg"
+             alt="Sala de supervisão">
+
+      </div>
+<p class="texto-centralizado">o espaço da escola onde o supervisor escolar acompanha e organiza o trabalho pedagógico, ajudando professores e alunos quando necessário. 📚👩‍🏫</p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ==============================
+       RODAPÉ
+  ============================== -->
+
+  <footer>
+
+    <p>
+      Desenvolvido pelos programadores do 2º ano:
+      Kaio, Gustavo, Cauã e Viktor.
+    </p>
+
+    <p>
+      Com instruções do professor Diegor.
+    </p>
+
+  </footer>
+
+<script>
+    const fotos = document.querySelectorAll(
+        '.container-imagens img, .imagem-total, .Leituraaoarliver, .Cozinha, .proferssores'
+    );
+
+    const fundo = document.createElement('div');
+    fundo.className = 'zoom-fundo';
+
+    const imagemZoom = document.createElement('img');
+
+    fundo.appendChild(imagemZoom);
+    document.body.appendChild(fundo);
+
+    fotos.forEach(function(foto) {
+
+        foto.addEventListener('click', function() {
+
+            imagemZoom.src = foto.src;
+
+            fundo.style.display = 'flex';
+
+        });
+
+    });
+
+    fundo.addEventListener('click', function() {
+
+        fundo.style.display = 'none';
+
+    });
+</script>
+
+</body>
+
+</html>

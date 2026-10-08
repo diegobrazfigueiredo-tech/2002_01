@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal Técnico José de Alencar</title>
+
+
+
+<style>
+
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #E8F6F8;
+        color: #0057B8;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       CABEÇALHO
+    ========================= */
+
+    header {
+        background: #0057B8;
+        color: #E8F6F8;
+        text-align: center;
+        padding: 45px 20px;
+        box-shadow: 0 5px 20px #0057B8;
+    }
+
+    header h1 {
+        font-size: 38px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+
+    /* =========================
+       MENU
+    ========================= */
+
+    nav {
+        background: #E8F6F8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        padding: 18px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 3px 12px #0057B8;
+    }
+
+    nav a {
+        color: #0057B8;
+        background: #E8F6F8;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 12px 22px;
+        border: 2px solid #0057B8;
+        border-radius: 25px;
+        box-shadow: 0 4px 0 #0057B8;
+        transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+        background: #0057B8;
+        color: #E8F6F8;
+        transform: translateY(-4px);
+        box-shadow: 0 8px 0 #0057B8;
+    }
+
+    nav a:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 0 #0057B8;
+    }
+
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    main {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    section {
+        background: #E8F6F8;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 18px;
+        border: 2px solid #0057B8;
+        box-shadow: 0 8px 25px #0057B8;
+        transition: 0.3s;
+    }
+
+    section:hover {
+        transform: translateY(-4px);
+    }
+
+    section h2 {
+        color: #0057B8;
+        text-align: center;
+        margin-bottom: 18px;
+        font-size: 27px;
+    }
+
+    section p {
+        text-align: justify;
+        font-size: 17px;
+        color: #0057B8;
+    }
+
+
+    /* =========================
+       DESTAQUE
+    ========================= */
+
+    .destaque {
+        background: #0057B8;
+        color: #E8F6F8;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .destaque h2 {
+        color: #E8F6F8;
+        font-size: 30px;
+    }
+
+    .destaque p {
+        color: #E8F6F8;
+        text-align: center;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .card {
+        background: #E8F6F8;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        border: 2px solid #0057B8;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        background: #0057B8;
+    }
+
+    .card:hover h3,
+    .card:hover p {
+        color: #E8F6F8;
+    }
+
+    .card h3 {
+        color: #0057B8;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       IMAGEM
+    ========================= */
+
+    .imagem-escola {
+        width: 80%;
+        max-width: 700px;
+        height: auto;
+        display: block;
+        margin: 25px auto 5px;
+        border-radius: 18px;
+        border: 4px solid #0057B8;
+        box-shadow: 0 8px 25px #0057B8;
+        cursor: zoom-in;
+        transition: 0.3s;
+    }
+
+    .imagem-escola:hover {
+        transform: scale(1.03);
+    }
+
+
+    /* =========================
+       TÍTULO EMTI
+    ========================= */
+
+    .titulo-emti {
+        text-align: center;
+        color: #0057B8;
+        margin: 40px 0 20px;
+        font-size: 32px;
+    }
+
+
+    /* =========================
+       MAIS INFORMAÇÕES
+    ========================= */
+
+    .mais-informacoes {
+        background: #E8F6F8;
+        border: 3px solid #0057B8;
+        border-radius: 20px;
+        padding: 28px;
+        margin: 35px 0;
+        box-shadow: 0 8px 20px #0057B8;
+        transition: 0.3s ease;
+    }
+
+    .mais-informacoes:hover {
+        transform: translateY(-5px);
+    }
+
+    .info-conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .info-icone {
+        font-size: 45px;
+    }
+
+    .mais-informacoes h2 {
+        color: #0057B8;
+        margin-bottom: 6px;
+        font-size: 25px;
+    }
+
+    .mais-informacoes p {
+        color: #0057B8;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .botao-info {
+        display: inline-block;
+        background: #0057B8;
+        color: #E8F6F8;
+        padding: 13px 22px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+        border: 2px solid #0057B8;
+        box-shadow: 0 4px 0 #0057B8;
+        transition: 0.25s ease;
+    }
+
+    .botao-info:hover {
+        background: #E8F6F8;
+        color: #0057B8;
+        transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       ZOOM DA FOTO
+    ========================= */
+
+    .zoom-fundo {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #0057B8;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        cursor: zoom-out;
+    }
+
+    .zoom-fundo.ativo {
+        display: flex;
+    }
+
+    .zoom-fundo img {
+        max-width: 95%;
+        max-height: 90vh;
+        object-fit: contain;
+        border: 5px solid #E8F6F8;
+        border-radius: 20px;
+        background: #E8F6F8;
+    }
+
+
+ 
+    /* =========================
+       RODAPÉ
+    ========================= */
+
+    footer {
+        background: #0057B8;
+        color: #E8F6F8;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 50px;
+    }
+
+    footer p {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header>
+
+    <h1>Portal Técnico José de Alencar</h1>
+
+    <p>Educação, tecnologia e inovação</p>
+
+</header>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<nav>
+
+    <a href="cursostecnicos1.html">
+        Cursos Técnicos
+    </a>
+
+    <a href="contato1.html">
+        Contato
+    </a>
+
+    <a href="galeriadeImagens1.html">
+        Imagem da Escola
+    </a>
+
+    <a href="historia da escola1.html">
+        História da Escola
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     CONTEÚDO
+========================= -->
+
+<main>
+
+    <section class="destaque">
+
+        <h2>Bem-vindos ao Portal Técnico</h2>
+
+        <p>
+            Escola Estadual José de Alencar
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h2>🏫 Sobre a Escola</h2>
+
+        <p>
+            A Escola Estadual José de Alencar é uma escola pública
+            estadual de Machacalis–MG, situada no Centro da cidade.
+            Possui biblioteca, laboratório de informática, quadra
+            coberta e outros espaços de apoio ao ensino.
+        </p>
+
+        <br>
+
+        <p>
+            Além de atender os estudantes da área urbana, sua
+            localização também é referência para rotas de transporte
+            escolar que atendem comunidades próximas.
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h2>🌐 O que você encontrará neste site?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>📚 Cursos</h3>
+
+                <p>
+                    Conheça os cursos técnicos e as oportunidades
+                    oferecidas pela escola.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📞 Contato</h3>
+
+                <p>
+                    Encontre informações para entrar em contato
+                    com a escola.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📸 Galeria</h3>
+
+                <p>
+                    Veja imagens e momentos da Escola José de Alencar.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>🚀 A inovação da escola: EMTI</h2>
+
+        <p>
+            O EMTI (Ensino Médio em Tempo Integral) da Escola Estadual
+            José de Alencar, em Machacalis, oferece uma educação mais
+            completa e inovadora.
+        </p>
+
+        <br>
+
+        <p>
+            Entre os pontos positivos estão a ampliação da jornada
+            escolar, projetos interdisciplinares, uso de tecnologias,
+            atividades culturais e esportivas, incentivo ao protagonismo
+            dos alunos e preparação para o futuro profissional.
+        </p>
+
+        <br>
+
+        <p>
+            O programa também fortalece a convivência, a autonomia,
+            a criatividade e o desenvolvimento de novas habilidades,
+            tornando o aprendizado mais dinâmico e significativo.
+        </p>
+
+    </section>
+
+
+    <h2 class="titulo-emti">
+        🎓 EMTI 2002
+    </h2>
+
+
+    <section>
+
+        <h2>💻 Desenvolvido pelos alunos do EMTI 2002</h2>
+
+        <p>
+            Este site foi desenvolvido pelos alunos do EMTI da sala
+            2002 com muito esforço, dedicação e criatividade.
+        </p>
+
+        <br>
+
+        <p>
+            Durante o projeto, os alunos enfrentaram desafios,
+            compartilharam ideias e trabalharam em equipe para
+            alcançar um bom resultado.
+        </p>
+
+        <br>
+
+        <p>
+            Mais do que criar um site, o trabalho mostrou a importância
+            da união, colaboração e comprometimento para transformar
+            ideias em realidade.
+        </p>
+
+    </section>
+
+
+    <section class="mais-informacoes">
+
+        <div class="info-conteudo">
+
+            <span class="info-icone">🚀</span>
+
+            <div>
+
+                <h2>Mais informações sobre o EMTI</h2>
+
+                <p>
+                    Saiba mais sobre o Ensino Médio em Tempo Integral,
+                    seus projetos, atividades e oportunidades.
+                </p>
+
+            </div>
+
+            <a href="Mais informações sober o Emti.html" class="botao-info">
+                Ver informações →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>📷 EMTI 2002</h2>
+
+        <img
+            src="img/Salas de aula2.jpg"
+            alt="Foto da sala do EMTI 2002"
+            class="imagem-escola"
+        >
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    <p>
+        Desenvolvido pelos alunos do 2º ano:
+        Kaio, Gustavo, Cauã e Viktor.
+    </p>
+
+    <p>
+        Com orientação do professor Diegor.
+    </p>
+
+    <p>
+        © 2026 — Portal Técnico José de Alencar
+    </p>
+
+</footer>
+
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       ZOOM DA FOTO
+    ========================= */
+
+    const foto = document.querySelector('.imagem-escola');
+
+    const fundoZoom = document.createElement('div');
+
+    fundoZoom.className = 'zoom-fundo';
+
+    const fotoZoom = document.createElement('img');
+
+    fundoZoom.appendChild(fotoZoom);
+
+    document.body.appendChild(fundoZoom);
+
+    foto.addEventListener('click', function () {
+
+        fotoZoom.src = foto.src;
+
+        fundoZoom.classList.add('ativo');
+
+    });
+
+    fundoZoom.addEventListener('click', function () {
+
+        fundoZoom.classList.remove('ativo');
+
+    });
+
+</script>
+
+</body>
+</html>

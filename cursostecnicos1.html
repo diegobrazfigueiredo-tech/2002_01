@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cursos da Escola José de Alencar</title>
+
+  <style>
+
+    /* ==============================
+       CONFIGURAÇÕES GERAIS
+    ============================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+
+      background-color: #E8F6F8;
+
+      color: #0057B8;
+
+      line-height: 1.7;
+    }
+
+
+    /* ==============================
+       CABEÇALHO
+    ============================== */
+
+    header {
+
+      background-color: #0057B8;
+
+      color: #E8F6F8;
+
+      padding: 38px 20px;
+
+      text-align: center;
+    }
+
+    header h1 {
+
+      font-size: 36px;
+
+      font-weight: bold;
+    }
+
+
+    /* ==============================
+       MENU DE NAVEGAÇÃO
+    ============================== */
+
+    nav {
+
+      background-color: #E8F6F8;
+
+      padding: 22px 15px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+
+    /* BOTÕES */
+
+    nav a {
+
+      display: inline-block;
+
+      color: #E8F6F8;
+
+      background-color: #0057B8;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      font-size: 16px;
+
+      padding: 13px 23px;
+
+      border: 3px solid #0057B8;
+
+      border-radius: 30px;
+
+      box-shadow: 0 5px 0 #0057B8;
+
+      transition: all 0.25s ease;
+    }
+
+
+    /* PASSAR O MOUSE */
+
+    nav a:hover {
+
+      background-color: #E8F6F8;
+
+      color: #0057B8;
+
+      transform: translateY(-4px);
+
+      box-shadow: 0 9px 0 #0057B8;
+    }
+
+
+    /* CLICAR */
+
+    nav a:active {
+
+      transform: translateY(2px);
+
+      box-shadow: 0 2px 0 #0057B8;
+    }
+
+
+    /* ==============================
+       ÁREA PRINCIPAL
+    ============================== */
+
+    main {
+
+      width: 90%;
+
+      max-width: 1000px;
+
+      margin: 35px auto;
+
+      padding: 25px;
+    }
+
+
+    /* ==============================
+       SEÇÕES
+    ============================== */
+
+    section {
+
+      background-color: #E8F6F8;
+
+      border: 3px solid #0057B8;
+
+      border-left: 10px solid #0057B8;
+
+      border-radius: 18px;
+
+      padding: 30px;
+
+      margin-bottom: 28px;
+
+      transition: 0.3s;
+    }
+
+
+    section:hover {
+
+      transform: translateY(-3px);
+    }
+
+
+    /* ==============================
+       TÍTULOS
+    ============================== */
+
+    section h2 {
+
+      color: #0057B8;
+
+      text-align: center;
+
+      font-size: 27px;
+
+      margin-bottom: 22px;
+    }
+
+
+    /* ==============================
+       TEXTOS
+    ============================== */
+
+    section p {
+
+      color: #0057B8;
+
+      text-align: center;
+
+      font-size: 18px;
+
+      font-weight: 500;
+
+      margin: 12px 0;
+
+      padding: 8px;
+
+      border-radius: 10px;
+    }
+
+
+    /* ==============================
+       RODAPÉ
+    ============================== */
+
+    footer {
+
+      background-color: #0057B8;
+
+      color: #E8F6F8;
+
+      text-align: center;
+
+      padding: 28px 20px;
+
+      margin-top: 40px;
+    }
+
+    footer p {
+
+      color: #E8F6F8;
+
+      text-align: center;
+
+      font-size: 15px;
+
+      margin: 5px;
+    }
+
+
+    /* ==============================
+       CELULAR
+    ============================== */
+
+    @media (max-width: 700px) {
+
+      header h1 {
+
+        font-size: 28px;
+      }
+
+
+      nav {
+
+        padding: 18px 10px;
+      }
+
+
+      nav a {
+
+        display: block;
+
+        width: 280px;
+
+        max-width: 90%;
+
+        text-align: center;
+
+        margin: 4px auto;
+      }
+
+
+      main {
+
+        width: 94%;
+
+        padding: 10px;
+      }
+
+
+      section {
+
+        padding: 22px;
+
+        border-left-width: 7px;
+      }
+
+
+      section h2 {
+
+        font-size: 23px;
+      }
+
+
+      section p {
+
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==============================
+       CABEÇALHO
+  ============================== -->
+
+  <header>
+
+    <h1>
+      Cursos da Escola José de Alencar
+    </h1>
+
+  </header>
+
+
+  <!-- ==============================
+       MENU
+  ============================== -->
+
+  <nav>
+
+    <a href="index2.html">
+      Início
+    </a>
+
+    <a href="contato1.html">
+      Contato
+    </a>
+
+    <a href="GaleriadeImagens1.html">
+      Imagens da Escola
+    </a>
+
+    <a href="historia da escola1.html">
+      História da Escola
+    </a>
+
+  </nav>
+
+
+  <!-- ==============================
+       CONTEÚDO
+  ============================== -->
+
+  <main>
+
+
+    <!-- CURSOS OFERECIDOS -->
+
+    <section>
+
+      <h2>
+        📚 Cursos Oferecidos
+      </h2>
+
+      <p>
+        Ensino Fundamental anos finais (6º ao 9º).
+      </p>
+
+      <p>
+        Ensino Médio Regular (1º ao 3º).
+      </p>
+
+      <p>
+        Ensino Médio Técnico Integral
+        (Informática EMTI) do 1º ao 3º.
+      </p>
+
+    </section>
+
+
+    <!-- CURSOS ADICIONADOS -->
+
+    <section>
+
+      <h2>
+        🎓 Cursos Adicionados
+      </h2>
+
+      <p>
+        Operador de Computadores
+      </p>
+
+      <p>
+        Cuidador de Idosos
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ==============================
+       RODAPÉ
+  ============================== -->
+
+  <footer>
+
+    <p>
+      Desenvolvido pelos programadores do 2º ano:
+      Kaio, Gustavo, Cauã e Viktor.
+    </p>
+
+    <p>
+      Com instruções do professor Diegor.
+    </p>
+
+    <p>
+      © 2026 — Portal Técnico José de Alencar
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>

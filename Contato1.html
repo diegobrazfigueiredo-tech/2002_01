@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato Escolar</title>
+
+<style>
+
+/* CONFIGURAÇÃO GERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#E8F6F8;
+    color:#0057B8;
+}
+
+/* CABEÇALHO */
+header{
+    background:#0057B8;
+    color:#E8F6F8;
+    text-align:center;
+    padding:35px 20px;
+}
+
+header h1{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* MENU */
+nav{
+    background:#E8F6F8;
+    text-align:center;
+    padding:22px 15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* BOTÕES DO MENU */
+nav a{
+    display:inline-block;
+    color:#0057B8;
+    background:#E8F6F8;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+
+    padding:12px 22px;
+
+    border:2px solid #0057B8;
+    border-radius:12px;
+
+    box-shadow:0 4px 0 #0057B8;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+nav a:hover{
+    background:#0057B8;
+    color:#E8F6F8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 7px 0 #0057B8;
+}
+
+/* EFEITO AO CLICAR */
+nav a:active{
+    transform:translateY(2px);
+    box-shadow:0 2px 0 #0057B8;
+}
+
+/* CONTEÚDO */
+main{
+    width:85%;
+    max-width:900px;
+    margin:40px auto;
+}
+
+/* CARTÕES */
+section{
+    background:#E8F6F8;
+    border:3px solid #0057B8;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+
+    transition:transform 0.2s ease;
+}
+
+section:hover{
+    transform:translateY(-3px);
+}
+
+section h2{
+    text-align:center;
+    color:#0057B8;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+section p{
+    text-align:center;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* RODAPÉ */
+footer{
+    background:#0057B8;
+    color:#E8F6F8;
+    text-align:center;
+    padding:20px;
+    font-size:15px;
+}
+
+/* CELULAR */
+@media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav a{
+        display:block;
+        width:240px;
+        text-align:center;
+        margin:4px auto;
+    }
+
+    header h1{
+        font-size:28px;
+    }
+
+    section h2{
+        font-size:22px;
+    }
+
+    section p{
+        font-size:16px;
+    }
+
+    main{
+        width:94%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Contato Escolar</h1>
+</header>
+
+<nav>
+
+<a href="index2.html">
+            Inicio
+        </a>
+
+
+    <a href="cursostecnicos1.html">
+        Cursos Técnicos
+    </a>
+
+    <a href="galeriadeImagens1.html">
+        Imagem da Escola
+    </a>
+
+    <a href="historia da escola1.html">
+        História da Escola
+    </a>
+
+    
+</nav>
+
+<main>
+
+<section>
+    <h2>📍 Endereço</h2>
+    <p>Rua Belarmino Dias dos Santos, nº 90</p>
+    <p>Centro – Machacalis/MG</p>
+</section>
+
+<section>
+    <h2>📧 E-mail Institucional</h2>
+    <p>escola.147133@educacao.mg.gov.br</p>
+</section>
+
+<section>
+    <h2>📞 Telefone</h2>
+    <p>(33) 98462-8276</p>
+</section>
+
+</main>
+
+<footer>
+    <p>Desenvolvido pelos alunos do 2º ano — Kaio, Gustavo, Cauã e Viktor.</p>
+    <p>Com orientação do professor Diegor.</p>
+</footer>
+
+<
+
+</body>
+</html>
